@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+/* HEADER STYLE */
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    color:#8AAAE5 ;
+}
+
+/* BUTTON STYLES */
+button {
+    --blue: #8AAAE5;
+    font-size: 15px;
+    padding: 0.2em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--blue);
+    background: linear-gradient(to right, #CADCFC 1%, transparent 40%,transparent 60% , #CADCFC 100%);
+    color: black;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px #CADCFC;
+  }
+  
+  button:hover {
+    color: var(--blue);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, #CADCFC 40%,#CADCFC 60% , transparent 100%);
+  }
+  
+  button:hover:before {
+    transform: translateX(15em);
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse; 
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #dddddd; 
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .custom-table th {
+    background-color: #f2f2f2; 
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /* POP UP STYLES */
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); 
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-container {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+.close{
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  top: 0;
+  
+}

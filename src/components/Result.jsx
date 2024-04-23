@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Result = ({ transactions }) => {
+
   return (
     <div className="table-container">
       <table className="custom-table">
@@ -16,14 +17,14 @@ const Result = ({ transactions }) => {
               {transactions
                 .filter((transaction) => transaction.transactionType === 'expenses')
                 .map((transaction, index) => (
-                  <div key={index}>{transaction.amount}</div>
+                  <div key={index}>{transaction.amount} $</div>
                 ))}
             </td>
             <td>
               {transactions
                 .filter((transaction) => transaction.transactionType === 'income')
                 .map((transaction, index) => (
-                  <div key={index}>{transaction.amount}</div>
+                  <div key={index}>{transaction.amount} $</div>
                 ))}
             </td>
           </tr>

@@ -1,12 +1,23 @@
 import React from 'react'
 
-const Budget = () => {
+const Budget = ({transactions}) => {
+
+  const totalIncome = transactions
+    .filter((transaction) => transaction.transactionType === 'income')
+    .reduce((acc, curr) => acc + parseInt(curr.amount), 0);
+
+  const totalExpenses = transactions
+    .filter((transaction) => transaction.transactionType === 'expenses')
+    .reduce((acc, curr) => acc + parseInt(curr.amount), 0);
+
+  const balance = totalIncome - totalExpenses;
+
   return (
     <div>
-      Balance : 1000 $
+      Balance : {balance} $
       <div className='totals'>
-       Total Income:3000 $
-       Total Expenses: 2000$ 
+       Total Income: {totalIncome} $
+       Total Expenses: {totalExpenses} $ 
       </div>
     </div>
   )

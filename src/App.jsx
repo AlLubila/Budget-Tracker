@@ -12,11 +12,10 @@ export const App = () => {
   const addTransaction = (transaction) => {
     setTransactions([...transactions, transaction]);
   };
-
   return (
     <div>
       <Header setBtnClicked={setBtnClicked} />
-      <Budget />
+      <Budget transactions={transactions}  />
       <Result transactions={transactions} />
       {btnClicked && <PopUp setBtnClicked={setBtnClicked} addTransaction={addTransaction} />}
     </div>

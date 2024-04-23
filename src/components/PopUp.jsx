@@ -13,7 +13,7 @@ const PopUp = ({ setBtnClicked, addTransaction }) => {
   };
 
   const handleSubmit = (e) => {
-
+    e.preventDefault()
     if (!amount.trim()) {
       return;
     }
@@ -36,7 +36,7 @@ const PopUp = ({ setBtnClicked, addTransaction }) => {
           <div className="input-container">
             <input
               placeholder="Enter the amount"
-              type="text"
+              type="number"
               value={amount}
               onChange={handleAmountChange}
             />
